@@ -1,21 +1,27 @@
 import os
 import sys
+import logging
 from source.postpredictions.logger import logging
 from source.postpredictions.exception import customexception
 from source.postpredictions.components.data_transformation import DataTransformation
-   
+from source.postpredictions.components.model_trainer import ModelTrainer
+
+# Debugging: Print the current working directory
+print("Current Working Directory:", os.getcwd())
+
 # Configure logging
+log_file_path = os.path.join('logs', 'virat.log')  # Specify the log file path
 logging.basicConfig(
-    filename='virat.log',
+    filename=log_file_path,
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s'
 )
 
-# Console handler for logging to the console
-console_handler = logging.StreamHandler()
-console_handler.setLevel(logging.INFO)
-console_handler.setFormatter(logging.Formatter('%(asctime)s - %(levelname)s - %(message)s'))
-logging.getLogger().addHandler(console_handler)
+# Remove the console handler
+logging.getLogger().handlers = []
+
+# Debugging: Print the log file path
+print("Log File Path:", log_file_path)
 
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -63,3 +69,9 @@ if __name__ == "__main__":
 
     data_transformation = DataTransformation()
     data_transformation.initialize_data_transformation(train_data, test_data)
+    
+    modeltrainer=ModelTrainer()
+    print(modeltrainer.initiate_model_trainer(train_arr,test_arr))
+    
+    # Explicitly close the logger
+logging.getLogger().handlers.clear()
