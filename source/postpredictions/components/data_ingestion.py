@@ -1,7 +1,21 @@
 import os
 import sys
 from source.postpredictions.logger import logging
+from source.postpredictions.exception import customexception
+from source.postpredictions.components.data_transformation import DataTransformation
+   
+# Configure logging
+logging.basicConfig(
+    filename='virat.log',
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
 
+# Console handler for logging to the console
+console_handler = logging.StreamHandler()
+console_handler.setLevel(logging.INFO)
+console_handler.setFormatter(logging.Formatter('%(asctime)s - %(levelname)s - %(message)s'))
+logging.getLogger().addHandler(console_handler)
 
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -36,16 +50,16 @@ class DataIngestion:
 
             logging.info("Inmgestion of the data iss completed")
 
-            return(
+            return (
                 self.ingestion_config.train_data_path,
                 self.ingestion_config.test_data_path
-
             )
         except Exception as e:
-            raise CustomException(e,sys)
+            raise customexception(e,sys)
         
-if __name__=="__main__":
-    obj=DataIngestion()
-    train_data,test_data=obj.initiate_data_ingestion()
+if __name__ == "__main__":
+    obj = DataIngestion()
+    train_data, test_data = obj.initiate_data_ingestion()
 
-    
+    data_transformation = DataTransformation()
+    data_transformation.initialize_data_transformation(train_data, test_data)
