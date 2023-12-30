@@ -1,0 +1,15 @@
+artifact_uri: file:///E:/endtoendpost/mlruns/0/46ebc82a9c914de3a02287c08db678ac/artifacts
+end_time: 1703955865952
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 46ebc82a9c914de3a02287c08db678ac
+run_name: aged-foal-903
+run_uuid: 46ebc82a9c914de3a02287c08db678ac
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1703955865821
+status: 3
+tags: []
+user_id: HP

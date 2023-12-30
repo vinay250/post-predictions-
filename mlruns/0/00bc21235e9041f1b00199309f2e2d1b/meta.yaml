@@ -1,0 +1,15 @@
+artifact_uri: file:///E:/endtoendpost/mlruns/0/00bc21235e9041f1b00199309f2e2d1b/artifacts
+end_time: 1703956543914
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 00bc21235e9041f1b00199309f2e2d1b
+run_name: silent-hare-426
+run_uuid: 00bc21235e9041f1b00199309f2e2d1b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1703956543844
+status: 3
+tags: []
+user_id: HP

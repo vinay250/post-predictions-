@@ -3,6 +3,7 @@ from urllib.parse import urlparse
 import mlflow
 from mlflow import log_artifacts
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
+import pandas as pd  # Import pandas if not already imported
 
 class ModelEvaluation:
     def __init__(self):
@@ -15,6 +16,10 @@ class ModelEvaluation:
         try:
             # Assuming 'Emotion' is the target column
             target_column = 'Emotion'
+
+            # Ensure test_array is a DataFrame
+            if not isinstance(test_array, pd.DataFrame):
+                raise ValueError("The 'test_array' is not a DataFrame.")
 
             # Check if the target column is present in the DataFrame
             if target_column not in test_array.columns:
@@ -64,4 +69,10 @@ class ModelEvaluation:
         
         except Exception as e:
             self.log_info(f"Exception occurred: {str(e)}")
-            raise e
+            # Handle the exception as needed
+
+# Replace 'your_module_containing_load_object' with the actual module where load_object is defined
+
+# Example usage:
+# model_evaluation = ModelEvaluation()
+# model_evaluation.initiate_model_evaluation(X_train, X_test)
