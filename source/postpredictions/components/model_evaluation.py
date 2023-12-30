@@ -13,9 +13,16 @@ class ModelEvaluation:
 
     def initiate_model_evaluation(self, train_array, test_array):
         try:
-            # Assuming test_array is a pandas DataFrame
-            X_test = test_array.drop(columns=['Emotion'])  # Drop the target column
-            y_test = test_array['Emotion']  # Target column
+            # Assuming 'Emotion' is the target column
+            target_column = 'Emotion'
+
+            # Check if the target column is present in the DataFrame
+            if target_column not in test_array.columns:
+                raise ValueError(f"The target column '{target_column}' is not present in the DataFrame.")
+
+            # Split features (X_test) and target variable (y_test) from the test_array
+            X_test = test_array.drop(columns=[target_column])
+            y_test = test_array[target_column]
 
             # Load the trained model
             model_path = os.path.join("artifacts", "model.pkl")
