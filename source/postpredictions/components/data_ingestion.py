@@ -64,7 +64,7 @@ if __name__ == "__main__":
     y = df['Emotion']
 
     # Split the data into training and testing sets
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.1, random_state=42)
 
     # Now you can initiate the model training
     model_trainer = ModelTrainer()

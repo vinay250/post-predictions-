@@ -1,0 +1,15 @@
+artifact_uri: file:///E:/endtoendpost/mlruns/0/24d0cc3a5aac479d821cb5eb38458bab/artifacts
+end_time: 1703957402155
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 24d0cc3a5aac479d821cb5eb38458bab
+run_name: calm-kite-336
+run_uuid: 24d0cc3a5aac479d821cb5eb38458bab
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1703957402102
+status: 3
+tags: []
+user_id: HP
