@@ -4,6 +4,8 @@ from source.postpredictions.logger import logging
 from source.postpredictions.exception import customexception
 from source.postpredictions.components.data_transformation import DataTransformation
 from source.postpredictions.components.model_trainer import ModelTrainer
+from source.postpredictions.components.model_evaluation import ModelEvaluation
+ 
 
 
 import pandas as pd
@@ -67,3 +69,7 @@ if __name__ == "__main__":
     # Now you can initiate the model training
     model_trainer = ModelTrainer()
     model_trainer.initiate_model_training(X_train, y_train, X_test, y_test)
+    
+    # Initiate model evaluation
+    model_evaluation = ModelEvaluation()
+    model_evaluation.initiate_model_evaluation(X_train, X_test)
