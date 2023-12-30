@@ -6,5 +6,11 @@ seaborn
 wordcloud
 #this is more stable version
 mlflow==2.2.2
+pyYAML
+pyYAML
+tqdm
+ensure==1.0.2
+joblib
+types-PyYAML
 
 -e .

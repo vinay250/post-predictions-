@@ -1,0 +1,8 @@
+artifacts_root: artifacts
+
+
+model_evaluation:
+  root_dir: artifacts
+  test_data_path: E:\endtoendpost\artifacts\test.csv
+ 
+  
