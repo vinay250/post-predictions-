@@ -11,6 +11,11 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 
+def load_object(file_path):
+    with open(file_path, 'rb') as f:
+        obj = pickle.load(f)
+    return obj
+
 def save_object(file_path, obj):
     try:
         dir_path = os.path.dirname(file_path)
