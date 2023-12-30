@@ -14,12 +14,21 @@ from sklearn.preprocessing import OrdinalEncoder, StandardScaler
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.feature_extraction.text import CountVectorizer
 from source.postpredictions.utils.utils import save_object
+from sklearn.model_selection import train_test_split
 
 @dataclass
 class DataTransformationConfig:
     preprocessor_obj_file_path = os.path.join('artifacts', 'preprocessor.pkl')
 
 class DataTransformation:
+    def initialize_data_transformation(self, train_data, test_data):
+        # Perform your data transformations
+        # ...
+
+        # Split the data into features (X) and target variable (y)
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+        return X_train, X_test, y_train, y_test
     def __init__(self):
         self.data_transformation_config = DataTransformationConfig()
 

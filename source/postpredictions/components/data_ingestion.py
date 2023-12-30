@@ -3,6 +3,8 @@ import sys
 from source.postpredictions.logger import logging
 from source.postpredictions.exception import customexception
 from source.postpredictions.components.data_transformation import DataTransformation
+from source.postpredictions.components.model_trainer import ModelTrainer
+
 
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -51,4 +53,17 @@ if __name__ == "__main__":
     data_transformation = DataTransformation()
     transformed_data = data_transformation.initialize_data_transformation(train_data, test_data)
 
-   
+
+    df = pd.read_csv(r'E:\endtoendpost\notebooks\data\dataset1.csv')
+
+    
+     # Split the data into features (X) and target variable (y)
+    X = df['Facebook Post']
+    y = df['Emotion']
+
+    # Split the data into training and testing sets
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+    # Now you can initiate the model training
+    model_trainer = ModelTrainer()
+    model_trainer.initiate_model_training(X_train, y_train, X_test, y_test)
