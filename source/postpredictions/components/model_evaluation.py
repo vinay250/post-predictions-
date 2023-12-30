@@ -5,6 +5,13 @@ import mlflow.sklearn
 from source.postpredictions.utils.utils import load_object
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 
+
+
+# Retrieve MLflow tracking URI, username, and password from environment variables
+mlflow_tracking_uri = os.environ.get("https://dagshub.com/vinayakavirat008/post-predictions-.mlflow")
+mlflow_tracking_username = os.environ.get("vinayakavirat008")
+mlflow_tracking_password = os.environ.get("8006a8c9e77082e90d96573a13bb278110094dff")
+
 class ModelEvaluation:
     def __init__(self):
         pass
