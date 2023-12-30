@@ -14,8 +14,8 @@ class ModelEvaluation:
     def initiate_model_evaluation(self, train_array, test_array):
         try:
             # Assuming test_array is a pandas DataFrame
-            X_test = test_array.iloc[:, :-1]
-            y_test = test_array.iloc[:, -1]
+            X_test = test_array.drop(columns=['Emotion'])  # Drop the target column
+            y_test = test_array['Emotion']  # Target column
 
             # Load the trained model
             model_path = os.path.join("artifacts", "model.pkl")
