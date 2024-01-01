@@ -74,5 +74,5 @@ class ModelEvaluation:
 # Replace 'your_module_containing_load_object' with the actual module where load_object is defined
 
 # Example usage:
-# model_evaluation = ModelEvaluation()
-# model_evaluation.initiate_model_evaluation(X_train, X_test)
+#model_evaluation = ModelEvaluation()
+#model_evaluation.initiate_model_evaluation(X_train, X_test)

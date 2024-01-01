@@ -1,0 +1,15 @@
+artifact_uri: file:///E:/endtoendpost/mlruns/0/52c2ee0fa7bb4dea8260840557c63c82/artifacts
+end_time: 1704104551024
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 52c2ee0fa7bb4dea8260840557c63c82
+run_name: gregarious-conch-737
+run_uuid: 52c2ee0fa7bb4dea8260840557c63c82
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704104550966
+status: 3
+tags: []
+user_id: HP
