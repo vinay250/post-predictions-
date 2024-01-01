@@ -5,12 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emotional Quotient Analyzer - Result</title>
+
+    <!-- Add styles for colors -->
+    <style>
+        body {
+            background-color: #f8f9fa; /* Set background color */
+            color: #495057; /* Set text color */
+            font-family: Arial, sans-serif; /* Specify font family */
+            margin: 20px; /* Add margin to the body */
+        }
+
+        h2 {
+            color: #007bff; /* Set heading color */
+        }
+
+        p {
+            margin-bottom: 10px; /* Add margin to separate paragraphs */
+        }
+
+        strong {
+            color: #28a745; /* Set strong text color */
+        }
+
+        a {
+            color: #007bff; /* Set link color */
+            text-decoration: none; /* Remove underline */
+        }
+
+        a:hover {
+            text-decoration: underline; /* Add underline on hover */
+        }
+    </style>
 </head>
 <body>
     <h2>Analysis Result</h2>
     <p>The Emotional Quotient for the provided Facebook post is: <strong>{{ result }}</strong></p>
     <p>Additional details or insights can be displayed here based on the analysis.</p>
     <br>
-    <a href="{{ url_for('index') }}">Go Back to Home</a>
+    <a href="/form">Go Back to Form</a>
 </body>
 </html>

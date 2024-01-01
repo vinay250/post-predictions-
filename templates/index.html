@@ -5,10 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emotional Quotient Analyzer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+            margin: 50px;
+        }
+
+        h1 {
+            color: #009688;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        a {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #009688;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        a:hover {
+            background-color: #00796b;
+        }
+    </style>
 </head>
 <body>
     <h1>Welcome to Emotional Quotient Analyzer</h1>
     <p>Use the form below to analyze the emotional quotient of a Facebook post.</p>
-    <a href="{{ url_for('show_form') }}">Go to Form</a>
+    <a href="/form">Go to Form</a>
 </body>
 </html>

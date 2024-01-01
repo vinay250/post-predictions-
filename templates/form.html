@@ -5,16 +5,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emotional Quotient Analyzer - Form</title>
+
+    <!-- Add styles for colors -->
+    <style>
+        body {
+            background-color: #f0f0f0; /* Set background color */
+            color: #333; /* Set text color */
+            font-family: Arial, sans-serif; /* Specify font family */
+        }
+
+        h2 {
+            color: #007bff; /* Set heading color */
+        }
+
+        label {
+            color: #555; /* Set label text color */
+        }
+
+        textarea {
+            border: 1px solid #ccc; /* Set border color */
+            padding: 8px; /* Add padding */
+            margin-bottom: 10px; /* Add margin to separate elements */
+        }
+
+        input[type="submit"] {
+            background-color: #28a745; /* Set submit button background color */
+            color: #fff; /* Set submit button text color */
+            padding: 10px 20px; /* Add padding to the submit button */
+            border: none; /* Remove border */
+            cursor: pointer; /* Add pointer cursor on hover */
+        }
+
+        a {
+            color: #007bff; /* Set link color */
+            text-decoration: none; /* Remove underline */
+        }
+
+        a:hover {
+            text-decoration: underline; /* Add underline on hover */
+        }
+    </style>
 </head>
 <body>
     <h2>Submit a Facebook Post</h2>
-    <form action="{{ url_for('analyze_post') }}" method="post">
+    <form action="/analyze" method="post">
         <label for="facebookPost">Facebook Post:</label>
         <textarea id="facebookPost" name="facebookPost" rows="4" cols="50" required></textarea>
         <br>
         <input type="submit" value="Analyze">
     </form>
     <br>
-    <a href="{{ url_for('index') }}">Go Back</a>
+    <a href="/">Go Back</a>
 </body>
 </html>

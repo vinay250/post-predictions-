@@ -1,0 +1,15 @@
+artifact_uri: file:///E:/endtoendpost/mlruns/0/004c00559cb045cc968a87f1ee300039/artifacts
+end_time: 1704116828946
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 004c00559cb045cc968a87f1ee300039
+run_name: glamorous-elk-216
+run_uuid: 004c00559cb045cc968a87f1ee300039
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704116828861
+status: 3
+tags: []
+user_id: HP
