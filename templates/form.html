@@ -8,13 +8,13 @@
 </head>
 <body>
     <h2>Submit a Facebook Post</h2>
-    <form action="result.html" method="post">
+    <form action="{{ url_for('analyze_post') }}" method="post">
         <label for="facebookPost">Facebook Post:</label>
         <textarea id="facebookPost" name="facebookPost" rows="4" cols="50" required></textarea>
         <br>
         <input type="submit" value="Analyze">
     </form>
     <br>
-    <a href="index.html">Go Back</a>
+    <a href="{{ url_for('index') }}">Go Back</a>
 </body>
 </html>

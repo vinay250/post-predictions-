@@ -1,4 +1,3 @@
-from source.postpredictions.pipelines.prediction_pipeline import CustomData,PredictPipeline
 from flask import Flask, render_template, request
 import logging
 
@@ -22,7 +21,6 @@ def analyze_post():
         facebook_post = request.form.get("facebookPost")
 
         # Perform your analysis here with the provided Facebook post
-
         # For demonstration purposes, let's assume the result is "Positive"
         result = "Positive"
 
@@ -30,5 +28,5 @@ def analyze_post():
 
         return render_template("result.html", result=result)
 
-if __name__ == "__main__":
-    app.run(debug=True)
+if __name__ == '__main__':
+    app.run(debug=False, host='0.0.0.0', port=80)
