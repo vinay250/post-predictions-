@@ -1,0 +1,15 @@
+artifact_uri: file:///E:/endtoendpost/mlruns/0/6dbe0c25673443c8af8f5279bcc085a8/artifacts
+end_time: 1704103936367
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 6dbe0c25673443c8af8f5279bcc085a8
+run_name: orderly-croc-316
+run_uuid: 6dbe0c25673443c8af8f5279bcc085a8
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704103936302
+status: 3
+tags: []
+user_id: HP
