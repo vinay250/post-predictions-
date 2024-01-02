@@ -4,7 +4,7 @@ import sys
 import logging
 from dataclasses import dataclass
 from source.postpredictions.logger import logging
-from source.postpredictions.exception import customexception
+from source.postpredictions.exception import CustomException
 from source.postpredictions.utils.utils import save_object
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import CountVectorizer

@@ -5,7 +5,7 @@ import numpy as np
 
 from dataclasses import dataclass
 from source.postpredictions.logger import logging
-from source.postpredictions.exception import customexception
+from source.postpredictions.exception import CustomException
 
 from sklearn.compose import ColumnTransformer
 from sklearn.impute import SimpleImputer
@@ -44,7 +44,7 @@ class DataTransformation:
             
             # Numerical Pipeline
             num_pipeline = Pipeline(steps=[
-                ('imputer', SimpleImputer(strategy='median')),
+                ('imputer', SimpleImputer(strategy='most_frequent')),
                 ('scaler', StandardScaler())
             ])
 
@@ -86,7 +86,7 @@ class DataTransformation:
             
             # Pipeline for numerical features
             numerical_transformer = Pipeline(steps=[
-                ('imputer', SimpleImputer(strategy='median')),
+                ('imputer', SimpleImputer(strategy='most_frequent')),
                 ('scaler', StandardScaler())
             ])
             

@@ -1,0 +1,15 @@
+artifact_uri: file:///E:/endtoendpost/mlruns/0/546653293e8146d5b7f6db8749a9ffca/artifacts
+end_time: 1704197053692
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 546653293e8146d5b7f6db8749a9ffca
+run_name: spiffy-eel-441
+run_uuid: 546653293e8146d5b7f6db8749a9ffca
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704197053542
+status: 3
+tags: []
+user_id: HP

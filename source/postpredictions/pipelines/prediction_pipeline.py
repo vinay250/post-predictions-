@@ -1,81 +1,56 @@
-# prediction_pipeline.py
-import sys
 import os
-import pandas as pd
-import numpy as np
-import sys  # Add this import statement
-from sklearn.base import is_classifier
-from sklearn.utils.validation import check_array
-from source.postpredictions.exception import customexception
+import sys
+from sklearn.pipeline import Pipeline
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.naive_bayes import MultinomialNB
+from sklearn.model_selection import train_test_split
+
+from source.postpredictions.exception import CustomException
 from source.postpredictions.logger import logging
 from source.postpredictions.utils.utils import load_object, save_object
 
 class PredictPipeline:
     def __init__(self):
-        pass
-    
-    def predict(self, custom_data):
+        self.model_loaded = False  # Assume the model is not loaded initially
+        self.pipeline = None
+
+    def load_model(self, model_path):
         try:
-            preprocessor_path = os.path.join("artifacts", "preprocessor.pkl")
-            model_path = os.path.join("artifacts", "model.pkl")
-            
-            preprocessor = load_object(preprocessor_path)
-            model = load_object(model_path)
-            
-            # Get features from CustomData
-            features = custom_data.get_features()
-            
-            # Convert the list to a NumPy array and reshape
-            features_array = np.array(features).reshape(-1, 1)
-            
-            # Perform necessary preprocessing
-            scaled_data = preprocessor.transform(features_array)
-            
-            # Make prediction
-            pred = model.predict(scaled_data)
-            
-            return pred
-        
-        except Exception as e:
-            raise customexception(e, sys)
-    
-    def save_model(self, save_path):
-        try:
-            # Save the preprocessor and model to files
-            preprocessor_path = os.path.join(save_path, "preprocessor.pkl")
-            model_path = os.path.join(save_path, "model.pkl")
+            # Load the pipeline from files
+            preprocessor_path = os.path.join(model_path, "preprocessor.pkl")
+            self.preprocessor = load_object(pipeline_path)
 
-            save_object(self.preprocessor, preprocessor_path)
-            save_object(self.model, model_path)
-
-            logging.info('Model saved successfully')
-
-        except Exception as e:
-            logging.error('Error saving model')
-            raise customexception(e, sys)
-
-    @classmethod
-    def load_model(cls, load_path):
-        try:
-            preprocessor_path = os.path.join(load_path, "preprocessor.pkl")
-            model_path = os.path.join(load_path, "model.pkl")
-
-            preprocessor = load_object(preprocessor_path)
-            model = load_object(model_path)
-
-            pipeline = cls()
-            pipeline.preprocessor = preprocessor
-            pipeline.model = model
-
+            self.model_loaded = True  # Set the flag to indicate that the model is loaded
             logging.info('Model loaded successfully')
-
-            return pipeline
 
         except Exception as e:
             logging.error('Error loading model')
-            raise customexception(e, sys)
+            raise CustomException(e, sys)
 
-# CustomData class in prediction_pipeline.py
+    def predict(self, custom_data):
+        try:
+            if not self.model_loaded:
+                raise CustomException("Model not loaded. Call load_model() first.")
+
+            # Assuming 'text' is the input text for prediction
+            text = custom_data.facebook_post  # Assuming the text is stored in 'facebook_post' attribute
+
+            # Make prediction
+            try:
+                pred = self.preprocessor.predict([text])
+            except Exception as e:
+                # Handle the case where the prediction itself causes an error
+                raise CustomException(f"Error during prediction: {e}")
+
+            return pred
+
+        except CustomException as ce:
+            # Catch custom exceptions and print detailed information
+            print(f"Custom Exception Details: {ce}")
+            raise ce
+        except Exception as e:
+            raise CustomException(e, sys)
+
 class CustomData:
     def __init__(self, facebook_post, emotion, user_id):
         self.facebook_post = facebook_post
@@ -83,5 +58,5 @@ class CustomData:
         self.user_id = user_id
 
     def get_features(self):
-        # Assuming you want to use only the 'facebook_post' as the feature
-        return [[self.facebook_post, "", ""]]
+        # Return a dictionary containing the values of the features
+        return {'facebook_post': self.facebook_post, 'user_id': self.user_id}

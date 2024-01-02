@@ -1,7 +1,7 @@
 import os
 import sys
 from source.postpredictions.logger import logging
-from source.postpredictions.exception import customexception
+from source.postpredictions.exception import CustomException
 from source.postpredictions.components.data_transformation import DataTransformation
 from source.postpredictions.components.model_trainer import ModelTrainer
 from source.postpredictions.components.model_evaluation import ModelEvaluation
