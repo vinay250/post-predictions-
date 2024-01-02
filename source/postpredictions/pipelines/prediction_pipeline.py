@@ -11,8 +11,8 @@ from source.postpredictions.utils.utils import load_object, save_object
 from dataclasses import dataclass
 
 @dataclass
-class PredictPipline:
-    Pipline_model_file = os.path.join('artifacts','Pipline.pkl')
+class PredictPiplineConfig:
+    Pipline_file_path = os.path.join('artifacts','Pipline.pkl')
     
 class PredictPipeline:
     def __init__(self):

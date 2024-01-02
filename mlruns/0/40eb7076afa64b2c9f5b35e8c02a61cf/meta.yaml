@@ -1,0 +1,15 @@
+artifact_uri: file:///E:/endtoendpost/mlruns/0/40eb7076afa64b2c9f5b35e8c02a61cf/artifacts
+end_time: 1704214280649
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 40eb7076afa64b2c9f5b35e8c02a61cf
+run_name: luminous-grouse-268
+run_uuid: 40eb7076afa64b2c9f5b35e8c02a61cf
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704214280580
+status: 3
+tags: []
+user_id: HP

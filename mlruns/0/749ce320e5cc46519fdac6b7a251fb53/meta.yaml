@@ -1,0 +1,15 @@
+artifact_uri: file:///E:/endtoendpost/mlruns/0/749ce320e5cc46519fdac6b7a251fb53/artifacts
+end_time: 1704216856332
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 749ce320e5cc46519fdac6b7a251fb53
+run_name: nebulous-donkey-532
+run_uuid: 749ce320e5cc46519fdac6b7a251fb53
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704216856269
+status: 3
+tags: []
+user_id: HP

@@ -5,7 +5,6 @@ from source.postpredictions.exception import CustomException
 from source.postpredictions.components.data_transformation import DataTransformation
 from source.postpredictions.components.model_trainer import ModelTrainer
 from source.postpredictions.components.model_evaluation import ModelEvaluation
- 
 
 
 import pandas as pd
@@ -73,3 +72,5 @@ if __name__ == "__main__":
     # Initiate model evaluation
     model_evaluation = ModelEvaluation()
     model_evaluation.initiate_model_evaluation(X_train, X_test)
+
+   
