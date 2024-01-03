@@ -2,7 +2,6 @@
 from flask import Flask, render_template, request
 from source.postpredictions.pipelines.prediction_pipeline import PredictPipeline, CustomData
 import logging
-import os
 from source.postpredictions.exception import CustomException
 
 app = Flask(__name__)
