@@ -81,3 +81,52 @@ The model training process involves:
 The Naive Bayes model achieved an accuracy of 66.67%. The classification report and confusion matrix provide insights into the model's performance on different emotions.
 
 
+
+ # Facebook Post Sentiment Analysis App
+
+This Flask application demonstrates how to build a web app that analyzes the sentiment of Facebook posts using a pre-trained machine learning model. The app allows users to input a Facebook post, and then displays the predicted sentiment of the post.
+
+## Prerequisites
+
+To run this app, you will need the following:
+
+* Python 3.8 or later
+* Flask
+* The `source` directory from the provided code
+
+## Installation
+
+1. Clone the repository to your local machine.
+2. Navigate to the project directory.
+3. Create a virtual environment and activate it.
+4. Install the required Python packages by running `pip install -r requirements.txt`.
+
+## Usage
+
+1. Start the Flask app by running `python app.py`.
+2. Open your web browser and navigate to `http://localhost:5001`.
+3. Enter a Facebook post in the text box and click the "Analyze" button.
+4. The predicted sentiment of the post will be displayed on the result page.
+
+## Code Overview
+
+The app consists of the following files:
+
+* `app.py`: The main Flask app file.
+* `source/postpredictions/pipelines/prediction_pipeline.py`: The class that encapsulates the machine learning model and prediction logic.
+* `source/postpredictions/exception.py`: The custom exception class used to handle errors.
+* `source/postpredictions/data/custom_data.py`: The class that represents a custom data object for the prediction pipeline.
+
+### `app.py`
+
+The `app.py` file is the entry point of the app. It sets up the Flask app, configures logging, loads the pre-trained model, and defines the routes for the app.
+
+The `index()` route displays the home page of the app. The `form()` route displays the form where users can input a Facebook post. The `analyze()` route handles the POST request from the form and performs the sentiment analysis.
+
+### `prediction_pipeline.py`
+
+The `prediction_pipeline.py` file defines the `PredictPipeline` class, which encapsulates the machine learning model and prediction logic. The `load_model()` method loads the pre-trained model from a specified path. The `predict()` method takes a `CustomData` object as input and returns the predicted sentiment of the Facebook post.
+
+### `exception.py`
+
+The `exception
