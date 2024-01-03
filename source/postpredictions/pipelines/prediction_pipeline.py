@@ -29,22 +29,7 @@ class PredictPipeline:
             logging.error('Error loading model')
             raise CustomException(e, sys)
 
-    def predict(self, custom_data):
-        try:
-            if not self.model_loaded:
-                raise CustomException("Model not loaded. Call load_model() first.")
-
-            # Assuming 'text' is the input text for prediction
-            text = custom_data.facebook_post  # Assuming the text is stored in 'facebook_post' attribute
-
-            # Make prediction
-            try:
-                pred = self.preprocessor.predict([text])
-            except Exception as e:
-                # Handle the case where the prediction itself causes an error
-                raise CustomException(f"Error during prediction: {e}")
-
-            return pred
+    
 
         except CustomException as ce:
             # Catch custom exceptions and print detailed information
