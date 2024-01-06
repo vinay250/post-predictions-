@@ -127,6 +127,3 @@ The `index()` route displays the home page of the app. The `form()` route displa
 
 The `prediction_pipeline.py` file defines the `PredictPipeline` class, which encapsulates the machine learning model and prediction logic. The `load_model()` method loads the pre-trained model from a specified path. The `predict()` method takes a `CustomData` object as input and returns the predicted sentiment of the Facebook post.
 
-### `exception.py`
-
-The `exception
