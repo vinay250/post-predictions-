@@ -129,3 +129,5 @@ The `prediction_pipeline.py` file defines the `PredictPipeline` class, which enc
 
 #overview-domian
 ## https://dadbxa2u3t.us-east-1.awsapprunner.com/
+
+![Alt text](C:\Users\HP\Pictures\Screenshots)
