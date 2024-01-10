@@ -1,4 +1,5 @@
-#this my end to end facebook post prediction project
+## This my end to end facebook post prediction project
+![Alt text](https://raw.githubusercontent.com/vinay250/post-predictions-/main/photos/Screenshot%20(268).png)
 
 #first initilize the git
 step by step overview of project 
@@ -130,5 +131,5 @@ The `prediction_pipeline.py` file defines the `PredictPipeline` class, which enc
 #overview-domian
 ## https://dadbxa2u3t.us-east-1.awsapprunner.com/
 
-![Alt text](https://raw.githubusercontent.com/vinay250/post-predictions-/main/photos/Screenshot%20(268).png)
+
 
