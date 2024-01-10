@@ -130,4 +130,5 @@ The `prediction_pipeline.py` file defines the `PredictPipeline` class, which enc
 #overview-domian
 ## https://dadbxa2u3t.us-east-1.awsapprunner.com/
 
-![Alt text]("E:\endtoendpost\photos\Screenshot (268).png")
+![Alt text](https://raw.githubusercontent.com/vinay250/post-predictions-/main/photos/Screenshot%20(268).png)
+
