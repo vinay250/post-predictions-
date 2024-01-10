@@ -131,5 +131,6 @@ The `prediction_pipeline.py` file defines the `PredictPipeline` class, which enc
 #overview-domian
 ## https://dadbxa2u3t.us-east-1.awsapprunner.com/
 
+[![Alt text](https://raw.githubusercontent.com/vinay250/post-predictions-/main/vedio/facebook%20post%20status%20predictions%20vedio_thumbnail.jpg)](https://github.com/vinay250/post-predictions-/blob/main/vedio/facebook%20post%20status%20predictions%20vedio.mp4)
 
 
